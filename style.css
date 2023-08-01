@@ -1,0 +1,466 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 8%;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 17px;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+    font-weight: 300;
+    transition: all .55s ease;
+    /* serach this dont know */
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid whitesmoke;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 30px;
+    z-index: 1001;
+    cursor: wait;
+    display: none;
+}
+
+.hero {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(111, 4, 159, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    align-items: center;
+}
+
+@media screen and (max-width:968px) {
+    .hero {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .lead {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+section {
+    padding: 0 10%;
+}
+
+section .hero-img img {
+    margin-top: 70px;
+    width: 500px;
+    height: 500px;
+}
+
+section .hero-description h5 {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+section .hero-description h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 1px;
+}
+
+section .hero-description h1 {
+    text-transform: capitalize;
+    font-family: 'Itim', cursive;
+    font-size: 70px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+section .hero-description p {
+    color: white;
+    font-size: 15px;
+    line-height: 2.0;
+    margin-bottom: 10px;
+}
+
+.hero-description a {
+    display: inline-block;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 1%;
+    width: 30%;
+    text-align: center;
+    background-color: #4c0377;
+}
+
+.hero-description a:hover {
+    border: 2px solid white;
+    transition: all .55s ease;
+    background: transparent;
+    transform: translateX(5px);
+}
+
+.icons {
+    position: absolute;
+    top: 40%;
+    padding: 0 3%;
+}
+
+div.icons a {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 30px;
+    transition: all .50s ease;
+}
+
+div.icons a:hover {
+    transform: translateY(-5px);
+}
+
+@media(max-width: 1535px) {
+    nav {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons {
+        padding: 2%;
+        transition: .2s;
+    }
+}
+
+@media(max-width:1360px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+    .hero-description h1 {
+        font-size: 55px;
+        transition: .2s;
+        margin: 0 0 30px;
+    }
+}
+
+.all-images {
+    padding-top: 60px;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(111, 4, 159, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+.all-images .one img {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 85%;
+    top: -200px;
+    height: 300px;
+    overflow: hidden;
+    animation-name: upanddown;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transition: all .3s;
+}
+
+@keyframes upanddown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.all-images .two {
+    position: relative;
+    left: 5%;
+}
+
+.all-images .two img.bomb {
+    position: absolute;
+    top: 40px;
+    left: 7%;
+    width: 500px;
+    height: 600px;
+    z-index: 1;
+}
+
+.all-images .two img.giant {
+    position: absolute;
+    top: 40px;
+    left: 53%;
+    width: 500px;
+    height: 600px;
+}
+
+.all-images .two img.king {
+    position: absolute;
+    right: 28%;
+    top: -150px;
+    width: 700px;
+    height: 800px;
+}
+
+.all-images .two img.wizard {
+    position: absolute;
+    z-index: 1;
+    left: 28%;
+    top: 150px;
+}
+
+.grid {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(111, 4, 159, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 30px;
+    grid-gap: 20px;
+}
+
+.grid img {
+    grid-column: span 6;
+}
+
+.grid .text {
+    grid-column: span 6;
+    align-self: center;
+    color: #fff;
+}
+
+.grid .text h1 {
+    text-transform: capitalize;
+    align-self: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.grid .text p {
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 2em;
+    text-align: justify;
+}
+
+.grid .text {
+    align-self: center;
+    color: #fff;
+}
+
+.grid img {
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    justify-self: center;
+}
+
+.grid h2 {
+    font-size: 50px;
+    grid-column: span 12;
+    color: #fff;
+    text-align: center;
+}
+
+.grid .card {
+    color: #fff;
+    grid-column: span 3;
+    background-color: rgba(252, 250, 250, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.grid .empty {
+    grid-column: span 4;
+}
+
+.grid .empty img {
+    width: 100%;
+    height: 550px;
+}
+
+.lead {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 60px auto;
+    border-bottom: 1px solid rgb(41, 40, 40);
+    padding: 65px 0;
+}
+
+.lead img {
+    left: -100px;
+    position: relative;
+    width: 750px;
+    height: 461px;
+    overflow: hidden;
+}
+
+.text2 {
+    align-self: center;
+    padding: 30px;
+}
+
+.text2 h2 {
+    font-size: 30px;
+}
+
+.text2 p {
+    line-height: 2em;
+}
+
+div.buttons {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+div.buttons a {
+    background-color: black;
+    border-radius: 8px;
+    color: #fff;
+    padding: 2px 70px;
+    transition: all .55s ease;
+}
+
+div.buttons a:hover {
+    color: aqua;
+}
+
+.lastest {
+    margin: 50px 0 0 0;
+    background-image: url('images/banne.webp');
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #fff;
+    padding: 50px;
+}
+
+.lastest img {
+    left: -100px;
+    position: relative;
+    width: 750px;
+    height: 461px;
+    overflow: hidden;
+}
+
+.lastest .text3 {
+    align-self: center;
+    font-size: 20px;
+}
+
+div.iconnns a {
+    color: #fff;
+    font-size: 30px;
+}
+
+div.feedback {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    background: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+div.feedback form {
+    border: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+div.feedback input {
+    padding: 0 20px;
+    height: 70px;
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px auto;
+}
+
+select {
+    margin: 20px auto;
+    outline: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.feedback button {
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background: black;
+    border-radius: 10px;
+    border: none;
+    transition: all .55s ease;
+}
+
+.feedback button:hover {
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: all .55s ease;
+    transform: translateX(5px);
+}
+
+.feedback ul {
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback img {
+    width: 400px;
+    height: 400px;
+}
